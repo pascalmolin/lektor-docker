@@ -1,4 +1,4 @@
-# Run lektor engine in Docker
+# Run your lektor static site in Docker
 
 Use this to run your lektor static site in docker container:
 ```bash
