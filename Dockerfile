@@ -6,4 +6,4 @@ RUN mkdir -p /opt/lektor
 WORKDIR /opt/lektor
 EXPOSE 5000
 
-ENTRYPOINT lektor serve -h 0.0.0.0 -p 5000 --no-prune
+CMD lektor serve -h 0.0.0.0 -p 5000 --no-prune
