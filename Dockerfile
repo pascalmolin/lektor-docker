@@ -1,6 +1,6 @@
 FROM python:3.8-buster
 
-RUN pip install lektor Werkzeug==0.16.1
+RUN pip install lektor==3.1.3 Werkzeug==0.16.1
 RUN mkdir -p /opt/lektor
 
 WORKDIR /opt/lektor
