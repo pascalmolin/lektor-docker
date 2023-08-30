@@ -1,10 +1,17 @@
 # Run your lektor static site in Docker
 
-Use this to run your lektor static site in docker container:
+Build image
+
 ```bash
-docker run -d --name my-lektor-site -p 5000:5000 \
-  -v lektor:/opt/lektor \
-  adrianharabula/lektor:latest
+docker build -t lektor-docker .
 ```
 
-Where `lektor` folder is your lektor project folder.
+Build the website
+```
+docker run -v $(pwd):/opt/lektor lektor-docker build
+```
+
+Or run it
+```
+docker run -d -p 5000:5000 -v $(pwd):/opt/lektor lektor-docker server --host 0.0.0.0
+```
